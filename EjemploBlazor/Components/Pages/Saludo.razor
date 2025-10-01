@@ -1,0 +1,18 @@
+@page "/saludo"
+
+<h3>Saludo</h3>
+
+<input @bind="nombre" placeholder="Escribe tu nombre" />
+<button type="button" @onclick="MostrarSaludo">Saludar</button>
+
+<label>@mensaje</label>
+
+@code {
+    private string nombre = string.Empty;
+    private string mensaje = string.Empty;
+
+    private void MostrarSaludo()
+    {
+        mensaje = $"Hola: {nombre}";
+    }
+}
