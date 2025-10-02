@@ -3,9 +3,9 @@
 <h3>Saludo</h3>
 
 <input @bind="nombre" placeholder="Escribe tu nombre" />
-<button type="button" @onclick="MostrarSaludo">Saludar</button>
+<button @onclick="MostrarSaludo">Saludar</button>
 
-<label>@mensaje</label>
+<p>@mensaje</p>
 
 @code {
     private string nombre = string.Empty;
@@ -13,6 +13,6 @@
 
     private void MostrarSaludo()
     {
-        mensaje = $"Hola: {nombre}";
+        mensaje = $"Hola, {nombre}!";
     }
 }
